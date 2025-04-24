@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 id="title">Formulario Freecodecamp</h1>
+    <p id="description">Este formulario servirá para definir tus objetivos en Freecodecamp</p>
+
+    <form id="survey-form">
+
+        <label id="name-label" for="name">Nombre:</label>
+        <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" value="" required><br><br>
+
+        <label id="email-label" for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" value="" required><br><br>
+
+        <label id="number-label" for="number">Edad (entre 10 y 100):</label>
+        <input type="number" id="number" name="number" min="10" max="100" placeholder="Tu edad" value=""
+            required><br><br>
+
+        <label for="dropdown">¿Cuál es tu rol actual?</label>
+        <select id="dropdown" name="role" required>
+            <option value="">--Selecciona una opción--</option>
+            <option value="estudiante">Estudiante</option>
+            <option value="profesional">Profesional</option>
+        </select><br><br>
+
+        <p>¿Recomendarías freeCodeCamp a un amigo?</p>
+        <label>
+            <input type="radio" name="recommend" value="si" required> Sí
+        </label>
+        <label>
+            <input type="radio" name="recommend" value="no"> No
+        </label><br><br>
+
+        <p>¿Qué tecnologías estás aprendiendo?</p>
+        <label>
+            <input type="checkbox" name="tech" value="html"> HTML
+        </label>
+        <label>
+            <input type="checkbox" name="tech" value="css"> CSS
+        </label>
+        <label>
+            <input type="checkbox" name="tech" value="javascript"> JavaScript
+        </label><br><br>
+
+        <label for="comments">Comentarios adicionales:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="40"
+            placeholder="Escribe aquí tus comentarios..."></textarea><br><br>
+
+        <button type="submit" id="submit">Enviar</button>
+    </form>
+</body>
+
+</html>
+
+<style>
+    /* Estilo general del body */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #e0eafc, #cfdef3);
+        margin: 0;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Título y descripción */
+    #title {
+        font-size: 28px;
+        margin-bottom: 10px;
+        color: #333;
+        text-align: center;
+    }
+
+    #description {
+        font-size: 16px;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #555;
+    }
+
+    /* Estilo del formulario */
+    form#survey-form {
+        background-color: white;
+        padding: 30px 40px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 100%;
+    }
+
+    /* Etiquetas */
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    /* Campos de entrada */
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 6px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #4a90e2;
+        outline: none;
+    }
+
+    /* Radios y checkboxes */
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin-right: 8px;
+        accent-color: #4a90e2;
+    }
+
+    p {
+        margin-top: 20px;
+        font-weight: bold;
+        color: #444;
+    }
+
+    /* Textarea */
+    textarea {
+        resize: vertical;
+    }
+
+    /* Botón de envío */
+    #submit {
+        margin-top: 25px;
+        width: 100%;
+        background-color: #4a90e2;
+        color: white;
+        padding: 12px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    #submit:hover {
+        background-color: #357ab8;
+    }
+</style>
